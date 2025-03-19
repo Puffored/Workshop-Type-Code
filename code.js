@@ -1,8 +1,8 @@
 export const configurazione = {
   testo: "MIAO",
 
-  dimensione: 0.1,
-  interlinea: 0.1,
+  dimensione: -0.1,
+  interlinea: 0.9,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
 
