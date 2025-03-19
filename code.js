@@ -2,12 +2,12 @@ export const configurazione = {
   testo: "MIAO",
 
   dimensione: 0.1,
-  interlinea: 0.6,
+  interlinea: 0.1,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
 
-  sensibilitàMicrofonoBase: 5,
-  densitàPuntiBase: 5,
+  sensibilitàMicrofonoBase: 1,
+  densitàPuntiBase: 1,
 
   nascondiInterfaccia: false,
 };
