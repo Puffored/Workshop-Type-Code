@@ -1,15 +1,15 @@
 export const configurazione = {
-  testo: "s",
+  testo: "S",
 
-  dimensione: 0.8,
-  interlinea: 0.9,
+  dimensione: 0.9,
+  interlinea: 0.5,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
 
-  sensibilitàMicrofonoBase: 10,
-  densitàPuntiBase: 1,
+  sensibilitàMicrofonoBase: 100,
+  densitàPuntiBase: 3,
 
-  nascondiInterfaccia: false,
+  nascondiInterfaccia: true, // per nasconder la schemata iniziale
 };
 
 /**
@@ -38,17 +38,18 @@ export function disegnaPunto({
   unita,
   volume,
   frameCount,
-  alpha = 0,
-  beta = 0,
-  gamma = 0,
+  alpha = 10,
+  beta = 5,
+  gamma = 10,
 }) {
-  push();
-  translate(x, y);
-  rotate(angolo);
-  let lunghezza = map(volume * 20, 0, 1, 50, 200);
-  line(0, 0, lunghezza, 0);
+  let larghezza = map(volume, 0, 1, 50, 200);
 
-  pop();
+  //let larghezza = map(sin(frameCount + indice), -1, 1, 50, 100);
+
+  rect(x, y, larghezza, 0.1);
+  rect(x, y, larghezza, 0.4);
+  rect(x, y, larghezza, -1);
+  rect(x, y, larghezza, -4);
 }
 
 /**
@@ -62,7 +63,7 @@ export function caricamentoRisorse() {}
  * Esempio: impostazioni di frame rate, misura degli angoli, ecc.
  */
 export function impostazioni() {
-  frameRate(30);
+  frameRate(50);
   angleMode(DEGREES);
   rectMode(CENTER);
 }
@@ -72,10 +73,10 @@ export function impostazioni() {
  * @param {function} disegnaTesto - La funzione che disegna il testo
  */
 export function sotto(disegnaTesto) {
-  background("deeppink");
+  background("green");
 
   // [INFO] Rimuovi il commento per disegnare il testo
-  //fill("white");
+  fill("yellow");
   //disegnaTesto();
 }
 
