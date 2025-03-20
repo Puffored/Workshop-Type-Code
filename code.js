@@ -6,7 +6,7 @@ export const configurazione = {
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
 
-  sensibilitàMicrofonoBase: 100,
+  sensibilitàMicrofonoBase: 10,
   densitàPuntiBase: 1,
 
   nascondiInterfaccia: false,
