@@ -1,12 +1,12 @@
 export const configurazione = {
-  testo: "OAO",
+  testo: "s",
 
-  dimensione: -0.9,
+  dimensione: 0.8,
   interlinea: 0.9,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
 
-  sensibilitàMicrofonoBase: 1,
+  sensibilitàMicrofonoBase: 100,
   densitàPuntiBase: 1,
 
   nascondiInterfaccia: false,
@@ -42,18 +42,12 @@ export function disegnaPunto({
   beta = 0,
   gamma = 0,
 }) {
-  const size = sin((frameCount + indice) * 6) * ((volume * unita) / 2) * unita;
-
-  if (indice % 2 == 0) {
-    fill("black");
-  } else {
-    fill("white");
-  }
-  noStroke();
-
   push();
   translate(x, y);
-  ellipse(0, 0, size);
+  rotate(angolo);
+  let lunghezza = map(volume * 20, 0, 1, 50, 200);
+  line(0, 0, lunghezza, 0);
+
   pop();
 }
 
@@ -70,6 +64,7 @@ export function caricamentoRisorse() {}
 export function impostazioni() {
   frameRate(30);
   angleMode(DEGREES);
+  rectMode(CENTER);
 }
 
 /**
@@ -80,8 +75,8 @@ export function sotto(disegnaTesto) {
   background("deeppink");
 
   // [INFO] Rimuovi il commento per disegnare il testo
-  fill("white");
-  disegnaTesto();
+  //fill("white");
+  //disegnaTesto();
 }
 
 /**
