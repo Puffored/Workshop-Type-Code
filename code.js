@@ -1,12 +1,12 @@
 export const configurazione = {
-  testo: "S",
+  testo: "spype",
 
   dimensione: 0.9,
   interlinea: 0.5,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
 
-  sensibilitàMicrofonoBase: 100,
+  sensibilitàMicrofonoBase: 50,
   densitàPuntiBase: 3,
 
   nascondiInterfaccia: true, // per nasconder la schemata iniziale
@@ -42,21 +42,25 @@ export function disegnaPunto({
   beta = 5,
   gamma = 10,
 }) {
-  let larghezza = map(volume, 0, 1, 50, 200);
+  let larghezza = map(volume, 0, 1, 50, 10);
 
   //let larghezza = map(sin(frameCount + indice), -1, 1, 50, 100);
 
-  rect(x, y, larghezza, 0.1);
-  rect(x, y, larghezza, 0.4);
-  rect(x, y, larghezza, -1);
-  rect(x, y, larghezza, -4);
+  push();
+  translate(x, y);
+  image(random(imgs), 0, 0, 35.5, 48);
+  pop();
 }
+
+let imgs;
 
 /**
  * Carica le risorse necessarie
  * Esempio: carica immagini, suoni, ecc.
  */
-export function caricamentoRisorse() {}
+export function caricamentoRisorse() {
+  imgs = [loadImage("./assets/carta.png")];
+}
 
 /**
  * Imposta le impostazioni iniziali
@@ -66,6 +70,7 @@ export function impostazioni() {
   frameRate(50);
   angleMode(DEGREES);
   rectMode(CENTER);
+  imageMode(CENTER);
 }
 
 /**
@@ -73,7 +78,7 @@ export function impostazioni() {
  * @param {function} disegnaTesto - La funzione che disegna il testo
  */
 export function sotto(disegnaTesto) {
-  background("green");
+  background("black");
 
   // [INFO] Rimuovi il commento per disegnare il testo
   fill("yellow");
