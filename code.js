@@ -1,13 +1,13 @@
 export const configurazione = {
-  testo: "spype",
+  testo: "s",
 
   dimensione: 0.9,
-  interlinea: 0.5,
+  interlinea: 0.1,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
 
-  sensibilitàMicrofonoBase: 50,
-  densitàPuntiBase: 3,
+  sensibilitàMicrofonoBase: 100,
+  densitàPuntiBase: 2,
 
   nascondiInterfaccia: true, // per nasconder la schemata iniziale
 };
@@ -59,11 +59,10 @@ let imgs;
  * Esempio: carica immagini, suoni, ecc.
  */
 export function caricamentoRisorse() {
-  imgs = [loadImage("./assets/carta.png")
-          loadImage("./assets/carta 1.png")
-          loadImage(":/assets/carta 2.png")
-
-      
+  imgs = [
+    loadImage("./assets/carta 1.png"),
+    /*loadImage("./assets/carta 2.png"),
+    loadImage("./assets/carta .png"),*/
   ];
 }
 
@@ -75,7 +74,7 @@ export function impostazioni() {
   frameRate(50);
   angleMode(DEGREES);
   rectMode(CENTER);
-  ;
+  imageMode(CENTER);
 }
 
 /**
@@ -83,10 +82,10 @@ export function impostazioni() {
  * @param {function} disegnaTesto - La funzione che disegna il testo
  */
 export function sotto(disegnaTesto) {
-  background("black");
+  background("rgba(0, 0, 0, 0.25)");
 
   // [INFO] Rimuovi il commento per disegnare il testo
-  fill("yellow");
+  //fill("yellow");
   //disegnaTesto();
 }
 
