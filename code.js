@@ -1,13 +1,13 @@
 export const configurazione = {
-  testo: "s",
+  testo: "spipe",
 
   dimensione: 0.9,
-  interlinea: 0.1,
+  interlinea: 0.5,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
 
-  sensibilitàMicrofonoBase: 100,
-  densitàPuntiBase: 2,
+  sensibilitàMicrofonoBase: 50,
+  densitàPuntiBase: 3,
 
   nascondiInterfaccia: true, // per nasconder la schemata iniziale
 };
@@ -60,9 +60,9 @@ let imgs;
  */
 export function caricamentoRisorse() {
   imgs = [
+    loadImage("./assets/carta.png"),
     loadImage("./assets/carta 1.png"),
-    /*loadImage("./assets/carta 2.png"),
-    loadImage("./assets/carta .png"),*/
+    loadImage("./assets/carta 2.png"),
   ];
 }
 
@@ -82,10 +82,10 @@ export function impostazioni() {
  * @param {function} disegnaTesto - La funzione che disegna il testo
  */
 export function sotto(disegnaTesto) {
-  background("rgba(0, 0, 0, 0.25)");
+  background("black");
 
   // [INFO] Rimuovi il commento per disegnare il testo
-  //fill("yellow");
+  fill("yellow");
   //disegnaTesto();
 }
 
