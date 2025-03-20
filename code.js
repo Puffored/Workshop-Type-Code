@@ -59,7 +59,12 @@ let imgs;
  * Esempio: carica immagini, suoni, ecc.
  */
 export function caricamentoRisorse() {
-  imgs = [loadImage("./assets/carta.png")];
+  imgs = [loadImage("./assets/carta.png")
+          loadImage("./assets/carta 1.png")
+          loadImage(":/assets/carta 2.png")
+
+      
+  ];
 }
 
 /**
@@ -70,7 +75,7 @@ export function impostazioni() {
   frameRate(50);
   angleMode(DEGREES);
   rectMode(CENTER);
-  imageMode(CENTER);
+  ;
 }
 
 /**
