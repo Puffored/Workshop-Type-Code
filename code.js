@@ -2,7 +2,7 @@ export const configurazione = {
   testo: "spipe",
 
   dimensione: 0.9,
-  interlinea: 0.5,
+  interlinea: 0.1,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
 
@@ -46,9 +46,12 @@ export function disegnaPunto({
 
   //let larghezza = map(sin(frameCount + indice), -1, 1, 50, 100);
 
+  let indice_carta = (indice + frameCount) % imgs.length;
+  let carta = imgs[indice_carta];
+
   push();
   translate(x, y);
-  image(random(imgs), 0, 0, 35.5, 48);
+  image(carta, 0, 0, 35.5, 48);
   pop();
 }
 
@@ -71,7 +74,7 @@ export function caricamentoRisorse() {
  * Esempio: impostazioni di frame rate, misura degli angoli, ecc.
  */
 export function impostazioni() {
-  frameRate(50);
+  frameRate(10);
   angleMode(DEGREES);
   rectMode(CENTER);
   imageMode(CENTER);
