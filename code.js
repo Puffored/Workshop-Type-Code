@@ -77,6 +77,14 @@ export function caricamentoRisorse() {
     loadImage("./assets/carta 4.png"),
     loadImage("./assets/carta 5.png"),
     loadImage("./assets/carta 6.png"),
+    loadImage("./assets/carta 7.png"),
+    loadImage("./assets/carta 8.png"),
+    loadImage("./assets/carta 9.png"),
+    loadImage("./assets/carta 10.png"),
+    loadImage("./assets/carta 11.png"),
+    loadImage("./assets/carta 12.png"),
+    loadImage("./assets/carta 13.png"),
+    loadImage("./assets/carta 14.png"),
   ];
 }
 
