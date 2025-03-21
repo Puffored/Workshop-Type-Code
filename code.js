@@ -102,7 +102,7 @@ export function impostazioni() {
  * @param {function} disegnaTesto - La funzione che disegna il testo
  */
 export function sotto(disegnaTesto) {
-  background("rgba(16, 206, 29, 0.87)");
+  background("rgb(16, 69, 16)");
 
   // [INFO] Rimuovi il commento per disegnare il testo
   //fill("yellow");
