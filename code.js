@@ -4,7 +4,7 @@ export const configurazione = {
   dimensione: 0.8,
   interlinea: 0.1,
   allineamento: "centro",
-  percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
+  percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf", // va bene come file otsn o tfr !
 
   sensibilitàMicrofonoBase: 1,
   densitàPuntiBase: 3,
