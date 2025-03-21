@@ -1,13 +1,12 @@
 export const configurazione = {
-  testo: "s",
-
-  dimensione: 0.8,
-  interlinea: 0.1,
+  testo: "spype",
+  dimensione: 0.9,
+  interlinea: 6,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf", // va bene come file otsn o tfr !
 
-  sensibilitàMicrofonoBase: 20,
-  densitàPuntiBase: 2,
+  sensibilitàMicrofonoBase: 10,
+  densitàPuntiBase: 3,
 
   nascondiInterfaccia: true, // per nasconder la schemata iniziale
 };
@@ -42,7 +41,7 @@ export function disegnaPunto({
   beta = 5,
   gamma = 10,
 }) {
-  let larghezza = map(volume, 0, 1, 50, 20);
+  let larghezza = map(volume, 0, 1, 50, 10);
 
   let indice_carta = (indice + i) % imgs.length;
   let carta = imgs[indice_carta];
@@ -79,12 +78,6 @@ export function caricamentoRisorse() {
     loadImage("./assets/carta 6.png"),
     loadImage("./assets/carta 7.png"),
     loadImage("./assets/carta 8.png"),
-    loadImage("./assets/carta 9.png"),
-    loadImage("./assets/carta 10.png"),
-    loadImage("./assets/carta 11.png"),
-    loadImage("./assets/carta 12.png"),
-    loadImage("./assets/carta 13.png"),
-    loadImage("./assets/carta 14.png"),
   ];
 }
 
