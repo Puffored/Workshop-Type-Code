@@ -9,7 +9,7 @@ export const configurazione = {
   sensibilitàMicrofonoBase: 10,
   densitàPuntiBase: 1,
 
-  nascondiInterfaccia: false,
+  nascondiInterfaccia: true,
 };
 
 /**
@@ -44,10 +44,7 @@ export function disegnaPunto({
 }) {
   push();
   translate(x, y);
-  rotate(angolo);
-  let lunghezza = map(volume * 20, 0, 1, 50, 200);
-  line(0, 0, lunghezza, 0);
-
+  line(0, 0, 0, beta);
   pop();
 }
 
@@ -85,6 +82,6 @@ export function sotto(disegnaTesto) {
  */
 export function sopra(disegnaTesto) {
   // [INFO] Rimuovi il commento per disegnare il testo
-  // fill("black");
-  // disegnaTesto();
+  //fill("black");
+  //disegnaTesto();
 }
