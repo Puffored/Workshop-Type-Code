@@ -6,8 +6,8 @@ export const configurazione = {
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf", // va bene come file otsn o tfr !
 
-  sensibilitàMicrofonoBase: 1,
-  densitàPuntiBase: 3,
+  sensibilitàMicrofonoBase: 20,
+  densitàPuntiBase: 2,
 
   nascondiInterfaccia: true, // per nasconder la schemata iniziale
 };
@@ -42,7 +42,7 @@ export function disegnaPunto({
   beta = 5,
   gamma = 10,
 }) {
-  let larghezza = map(volume, 0, 1, 50, 30);
+  let larghezza = map(volume, 0, 1, 50, 20);
 
   let indice_carta = (indice + i) % imgs.length;
   let carta = imgs[indice_carta];
@@ -95,7 +95,7 @@ let i = 0;
  * Esempio: impostazioni di frame rate, misura degli angoli, ecc.
  */
 export function impostazioni() {
-  frameRate(30);
+  frameRate(27);
   angleMode(DEGREES);
   rectMode(CENTER);
   imageMode(CENTER);
