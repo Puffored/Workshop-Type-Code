@@ -1,7 +1,7 @@
 export const configurazione = {
   testo: "s",
 
-  dimensione: 0.9,
+  dimensione: 0.8,
   interlinea: 0.1,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
@@ -44,7 +44,7 @@ export function disegnaPunto({
 }) {
   let larghezza = map(volume, 0, 1, 50, 30);
 
-  let indice_carta = (indice + frameCount) % imgs.length;
+  let indice_carta = (indice + i) % imgs.length;
   let carta = imgs[indice_carta];
 
   push();
@@ -71,15 +71,21 @@ export function caricamentoRisorse() {
   ];
 }
 
+let i = 0;
+
 /**
  * Imposta le impostazioni iniziali
  * Esempio: impostazioni di frame rate, misura degli angoli, ecc.
  */
 export function impostazioni() {
-  frameRate(10);
+  frameRate(30);
   angleMode(DEGREES);
   rectMode(CENTER);
   imageMode(CENTER);
+
+  setInterval(() => {
+    i += 1;
+  }, 100);
 }
 
 /**
