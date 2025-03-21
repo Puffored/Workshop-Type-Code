@@ -1,5 +1,5 @@
 export const configurazione = {
-  testo: "spipe",
+  testo: "spype",
 
   dimensione: 0.9,
   interlinea: 0.1,
@@ -44,8 +44,6 @@ export function disegnaPunto({
 }) {
   let larghezza = map(volume, 0, 1, 50, 10);
 
-  //let larghezza = map(sin(frameCount + indice), -1, 1, 50, 100);
-
   let indice_carta = (indice + frameCount) % imgs.length;
   let carta = imgs[indice_carta];
 
@@ -66,6 +64,8 @@ export function caricamentoRisorse() {
     loadImage("./assets/carta.png"),
     loadImage("./assets/carta 1.png"),
     loadImage("./assets/carta 2.png"),
+    loadImage("./assets/carta 3.png"),
+    loadImage("./assets/carta 4.png"),
   ];
 }
 
@@ -88,7 +88,7 @@ export function sotto(disegnaTesto) {
   background("black");
 
   // [INFO] Rimuovi il commento per disegnare il testo
-  fill("yellow");
+  //fill("yellow");
   //disegnaTesto();
 }
 
