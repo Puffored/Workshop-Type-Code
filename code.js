@@ -47,7 +47,7 @@ export function disegnaPunto({
   stroke("green");
 
   let b = map(beta, -90, 90, -unita, unita);
-  let g = map(gammma, -90, 90, -unita, unita);
+  let g = map(gamma, -90, 90, -unita, unita);
 
   line(0, 0, g, b);
   pop();
