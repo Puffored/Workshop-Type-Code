@@ -6,7 +6,7 @@ export const configurazione = {
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf",
 
-  sensibilitàMicrofonoBase: 10,
+  sensibilitàMicrofonoBase: 1,
   densitàPuntiBase: 3,
 
   nascondiInterfaccia: true, // per nasconder la schemata iniziale
@@ -49,7 +49,16 @@ export function disegnaPunto({
 
   push();
   translate(x, y);
-  image(carta, 0, 0, 35.5, 48);
+
+  const dist = map(volume, 0, 1, 0, unita * 4);
+
+  const a = map(noise(x, y), 0, 1, 0, 360);
+  // const a = map(random(), 0, 1, 0, 360);
+  const tx = dist * sin(a);
+  const ty = dist * cos(a);
+  translate(tx, ty);
+
+  image(carta, 0, 0, (35.5 * unita) / 30, (48 * unita) / 30);
   pop();
 }
 
