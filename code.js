@@ -1,7 +1,7 @@
 export const configurazione = {
   testo: "spype",
-  dimensione: 1,
-  interlinea: 500,
+  dimensione: 0.8,
+  interlinea: 2,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf", // va bene come file otsn o tfr !
 
@@ -41,7 +41,7 @@ export function disegnaPunto({
   beta = 5,
   gamma = 10,
 }) {
-  let larghezza = map(volume, 0, 1, 30, 10);
+  let larghezza = map(volume, 0, 1, 50, 10);
 
   let indice_carta = (indice + i) % imgs.length;
   let carta = imgs[indice_carta];
@@ -88,14 +88,14 @@ let i = 0;
  * Esempio: impostazioni di frame rate, misura degli angoli, ecc.
  */
 export function impostazioni() {
-  frameRate(5);
+  frameRate(30);
   angleMode(DEGREES);
   rectMode(CENTER);
   imageMode(CENTER);
 
   setInterval(() => {
     i += 1;
-  }, 2000);
+  }, 150);
 }
 
 /**
