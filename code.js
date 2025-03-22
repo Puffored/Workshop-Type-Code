@@ -1,11 +1,11 @@
 export const configurazione = {
   testo: "spype",
-  dimensione: 0.9,
-  interlinea: 6,
+  dimensione: 1,
+  interlinea: 500,
   allineamento: "centro",
   percorsoFont: "./assets/InputMonoCondensed-BoldItalic.ttf", // va bene come file otsn o tfr !
 
-  sensibilitàMicrofonoBase: 10,
+  sensibilitàMicrofonoBase: 1,
   densitàPuntiBase: 3,
 
   nascondiInterfaccia: true, // per nasconder la schemata iniziale
@@ -41,7 +41,7 @@ export function disegnaPunto({
   beta = 5,
   gamma = 10,
 }) {
-  let larghezza = map(volume, 0, 1, 50, 10);
+  let larghezza = map(volume, 0, 1, 30, 10);
 
   let indice_carta = (indice + i) % imgs.length;
   let carta = imgs[indice_carta];
@@ -49,7 +49,7 @@ export function disegnaPunto({
   push();
   translate(x, y);
 
-  const dist = map(volume, 0, 1, 0, unita * 4);
+  const dist = map(volume, 0, 1, 0, unita * 10);
 
   const a = map(noise(x, y), 0, 1, 0, 360);
   // const a = map(random(), 0, 1, 0, 360);
@@ -88,14 +88,14 @@ let i = 0;
  * Esempio: impostazioni di frame rate, misura degli angoli, ecc.
  */
 export function impostazioni() {
-  frameRate(27);
+  frameRate(5);
   angleMode(DEGREES);
   rectMode(CENTER);
   imageMode(CENTER);
 
   setInterval(() => {
     i += 1;
-  }, 100);
+  }, 2000);
 }
 
 /**
@@ -103,7 +103,7 @@ export function impostazioni() {
  * @param {function} disegnaTesto - La funzione che disegna il testo
  */
 export function sotto(disegnaTesto) {
-  background("rgb(16, 69, 16)");
+  background("rgb(50, 230, 227)");
 
   // [INFO] Rimuovi il commento per disegnare il testo
   //fill("yellow");
